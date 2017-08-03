@@ -1,0 +1,5 @@
+<div class="container">
+  <h2> <%= @todo.description %> </h2>
+  <p> Estado: <%= @todo.completed == true ? 'Completo' : 'No Completo' %> </p>
+  <p> Creado: <%= time_ago_in_words @todo.created_at %> </p>
+</div>

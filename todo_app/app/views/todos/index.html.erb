@@ -1,0 +1,12 @@
+<div class="well">
+  <% @todos.each do |i| %>
+    <h2> <%= i.id %> </h2>
+    <h3> <%= i.description %> </h3>
+    <p>  <%= i.completed == true ? 'Completo' : 'No Completo' %> </p>
+    <p>  <%= link_to 'Detalle', i, class: 'btn btn-primary' %>
+         <%= link_to "Completar Tarea", complete_path(i), action: :complete, class: 'btn btn-success' %>
+         <%= link_to 'Editar', update_path(i), class: 'btn btn-warning' %>
+         <%= link_to 'Borrar', i, method: :delete, class: 'btn btn-danger' %> </p>
+  <% end %>
+  <%= link_to 'Nuevo', todos_new_path , class: 'btn btn-success' %>
+</div>
