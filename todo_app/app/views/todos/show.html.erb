@@ -1,5 +1,6 @@
-<div class="container">
+<div class="well">
   <h2> <%= @todo.description %> </h2>
   <p> Estado: <%= @todo.completed == true ? 'Completo' : 'No Completo' %> </p>
   <p> Creado: <%= time_ago_in_words @todo.created_at %> </p>
+  <%= link_to "Atrás", todos_path, class: 'btn btn-default' %>
 </div>
