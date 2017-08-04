@@ -1,7 +1,7 @@
 <div class="well">
   <%= form_with model: @todo, local: true do |f| %>
-    <p><%= f.label :description, "Descripcion" %>
-    <%= f.text_area :description %></p>
+    <p><%= f.label :description, "Descripción" %>
+    <%= f.text_area :description, placeholder: '-- Agregar descripción --', class: 'form-control' %></p>
     <p><%= f.label :completed, "Estado" %>
     <%= f.check_box :completed %></p>
     <%= link_to 'Atras', todos_path, class: 'btn btn-default' %>
